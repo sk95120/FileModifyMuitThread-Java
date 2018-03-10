@@ -9,7 +9,7 @@ public class setDirectoryExist {
 	}
 	public setDirectoryExist(String Directory) {
 		File file = new File(Directory);
-		if((!file.exists()) && !file.isDirectory()) {
+		if((!file.isDirectory()) && (!file.exists()) ) {
 			System.out.println("目录"+Directory+"已创建！");
 			file.mkdir();
 		}
