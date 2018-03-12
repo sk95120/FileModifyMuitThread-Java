@@ -2,14 +2,18 @@ package copy;
 
 import java.io.File;
 import java.io.FilenameFilter;
+import java.io.IOException;
 
 class getJpgFromFolder {
-	String years,month,day;
+	String years=null,month=null,day=null,JpgName=null;
+	String AA=null;
+	String BB=null;
 	public	getJpgFromFolder() {
 		
 	}
-	public	getJpgFromFolder(String Directory) {
+	public	getJpgFromFolder(String Directory,String AFolderDirctory,String BFolderDirctory) {
 		File file = new File(Directory);
+		MoveAtoB AtoB = new MoveAtoB();
 		if(file.exists()) {
 			
 			//年份的判断
@@ -43,9 +47,15 @@ class getJpgFromFolder {
 										if(jpgs.length == 0) 
 											continue;
 										for(int l = 0; l<jpgs.length ;l++) {
+											JpgName = jpgs[l].getName();
 											if(jpgs[l].isFile() && 
 													jpgs[l].toString().endsWith(".jpg")) {
 												System.out.println(jpgs[l]);
+												System.out.println("JpgName的值是："+JpgName);
+												AA = AFolderDirctory+"\\"+years+"\\"+month+"\\"+day+"\\"+JpgName;
+												BB = BFolderDirctory+"\\"+years+"_"+month
+														+"_"+day+"_"+JpgName;
+												AtoB.FileMoveAtoB(AA,BB);
 											}
 										}
 										

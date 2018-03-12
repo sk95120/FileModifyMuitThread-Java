@@ -23,7 +23,7 @@ public class copyFile {
 		BFolderDirctory = nowDirectory+"\\B";
 		new setDirectoryExist(AFolderDirctory);
 		new setDirectoryExist(BFolderDirctory);
-		new getJpgFromFolder(AFolderDirctory);
+		new getJpgFromFolder(AFolderDirctory,AFolderDirctory,BFolderDirctory);
 		System.out.println(BFolderDirctory); ////set
 	}
 }
