@@ -11,7 +11,6 @@ public class copyFile {
 		File directory = new File(".");
 		String nowDirectory = null;
 		String AFolderDirctory = null,BFolderDirctory = null;
-		
 		try {
 			nowDirectory = directory.getCanonicalPath().toString();
 		} catch (IOException e) {
