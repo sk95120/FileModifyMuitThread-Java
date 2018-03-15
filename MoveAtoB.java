@@ -6,11 +6,23 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-class MoveAtoB {
+class MoveAtoB extends Thread{
+	private String AA = null;
+	private String BB = null;
+	File A = null;
+	File B = null;
 	public void FileMoveAtoB(String AA,String BB){
+		this.AA = AA;
+		this.BB = BB;		
+	}
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		if(AA != null && B != null) {
 			int num = 0;
-			File A = new File(AA);
-			File B = new File(BB);
+			A = new File(AA);
+			B = new File(BB);
 			FileInputStream in;
 			try {
 				in = new FileInputStream(A);
@@ -25,6 +37,6 @@ class MoveAtoB {
 				// TODO Auto-generated catch block
 				e2.printStackTrace();
 			}
-			
-	} 
+		} 
+	}
 }

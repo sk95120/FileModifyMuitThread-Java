@@ -9,13 +9,19 @@ class getJpgFromFolder {
 	String AA=null;
 	String BB=null;
 	File file = null;
-	MoveAtoB AtoB = new MoveAtoB();
-	fileMoniter filemonitor = new fileMoniter();
+	MoveAtoB AtoB = null;
+	fileMoniter filemonitor = null;
 	public	getJpgFromFolder() {
 		
 	}
 	public	getJpgFromFolder(String Directory,String AFolderDirctory,String BFolderDirctory) {
 		file = new File(Directory);
+		AtoB = new MoveAtoB();
+		filemonitor = new fileMoniter();
+		AtoB.start();
+		filemonitor.start();
+		scannerJpgFromFolder(Directory, AFolderDirctory, BFolderDirctory);
+		
 	}
 	public void scannerJpgFromFolder(String Directory,String AFolderDirctory,String BFolderDirctory) {
 		file = new File(Directory);
@@ -60,6 +66,7 @@ class getJpgFromFolder {
 														BB = BFolderDirctory+"\\"+years+"_"+month
 																+"_"+day+"_"+JpgName;
 														AtoB.FileMoveAtoB(AA,BB);
+														filemonitor.FileMoniterFront(AA, BB);
 													}
 												}
 												
