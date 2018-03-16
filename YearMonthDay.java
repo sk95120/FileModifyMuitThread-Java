@@ -9,7 +9,7 @@ class getJpgFromFolder {
 	File file = null;
 	MoveAtoB AtoB = null;
 	fileMoniter filemonitor = null;
-	StringSingleSimple stringsinglesimple = new StringSingleSimple();
+	StringSingleSimple stringsinglesimple = new StringSingleSimple().getStringSingleSimple();
 	public	getJpgFromFolder() {
 		
 	}

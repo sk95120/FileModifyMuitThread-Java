@@ -3,7 +3,7 @@ package copy;
 public class StringSingleSimple {
 	private static String AA = null;
 	private static String BB = null;
-	private static StringSingleSimple stringsinglesimple = null;
+	private static volatile StringSingleSimple stringsinglesimple = null;
 	public String getAA() {
 		return AA;
 	}
@@ -16,9 +16,10 @@ public class StringSingleSimple {
 	public void setBB(String bB) {
 		BB = bB;
 	}
-	public StringSingleSimple() {
+	public static synchronized StringSingleSimple getStringSingleSimple() {
 		if(stringsinglesimple == null)
 			StringSingleSimple.stringsinglesimple = new StringSingleSimple();
+		return stringsinglesimple;
 	}
 	
 }

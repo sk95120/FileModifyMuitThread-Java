@@ -12,7 +12,7 @@ public class fileMoniter extends Thread {
 	}
 	@Override
 	public void run() {
-		StringSingleSimple stringsinglesimple = new StringSingleSimple();
+		StringSingleSimple stringsinglesimple = new StringSingleSimple().getStringSingleSimple();
 		System.out.println("fileMoniter Thread !"+stringsinglesimple.getAA()+stringsinglesimple.getBB());
 		this.aa = stringsinglesimple.getAA();
 		this.bb = stringsinglesimple.getBB();

@@ -18,7 +18,7 @@ class MoveAtoB extends Thread{
 	@Override
 	public void run() {
 		System.out.println("MoveAtoB Thread!");
-		StringSingleSimple stringsinglesimple = new StringSingleSimple();
+		StringSingleSimple stringsinglesimple = new StringSingleSimple().getStringSingleSimple();
 		this.AA = stringsinglesimple.getAA();
 		this.BB = stringsinglesimple.getBB();
 		if(AA != null && BB != null) {
