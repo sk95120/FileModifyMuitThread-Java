@@ -16,9 +16,9 @@ class getJpgFromFolder {
 	public	getJpgFromFolder(String Directory,String AFolderDirctory,String BFolderDirctory) {
 		file = new File(Directory);
 		AtoB = new MoveAtoB();
-		filemonitor = new fileMoniter();
+		//filemonitor = new fileMoniter();
 		AtoB.start();
-		filemonitor.start();
+		//filemonitor.start();
 		scannerJpgFromFolder(Directory, AFolderDirctory, BFolderDirctory);
 		
 	}
@@ -66,8 +66,8 @@ class getJpgFromFolder {
 																+"_"+day+"_"+JpgName;
 														stringsinglesimple.setAA(AA);
 														stringsinglesimple.setBB(BB);
-														AtoB.FileMoveAtoB(AA,BB);
-														filemonitor.FileMoniterFront(AA, BB);
+														//AtoB.FileMoveAtoB(AA,BB);
+														//filemonitor.FileMoniterFront(AA, BB);
 													}
 												}
 												
