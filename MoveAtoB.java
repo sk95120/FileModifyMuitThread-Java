@@ -18,8 +18,11 @@ class MoveAtoB extends Thread{
 
 	@Override
 	public void run() {
-		// TODO Auto-generated method stub
-		if(AA != null && B != null) {
+		System.out.println("MoveAtoB Thread!");
+		StringSingleSimple stringsinglesimple = new StringSingleSimple();
+		this.AA = stringsinglesimple.getAA();
+		this.BB = stringsinglesimple.getBB();
+		if(AA != null && BB != null) {
 			int num = 0;
 			A = new File(AA);
 			B = new File(BB);

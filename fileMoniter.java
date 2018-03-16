@@ -13,6 +13,11 @@ public class fileMoniter extends Thread {
 	}
 	@Override
 	public void run() {
+		StringSingleSimple stringsinglesimple = new StringSingleSimple();
+		System.out.println("fileMoniter Thread !"+stringsinglesimple.getAA()+stringsinglesimple.getBB());
+		this.aa = stringsinglesimple.getAA();
+		this.bb = stringsinglesimple.getBB();
+		System.out.println("the value of aa bb:"+aa+bb);
 		// TODO Auto-generated method stub
 		while(true) {	
 			if(aa != null && bb != null) {

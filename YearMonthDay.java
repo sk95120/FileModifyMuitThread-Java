@@ -11,6 +11,7 @@ class getJpgFromFolder {
 	File file = null;
 	MoveAtoB AtoB = null;
 	fileMoniter filemonitor = null;
+	StringSingleSimple stringsinglesimple = new StringSingleSimple();
 	public	getJpgFromFolder() {
 		
 	}
@@ -65,6 +66,8 @@ class getJpgFromFolder {
 														AA = AFolderDirctory+"\\"+years+"\\"+month+"\\"+day+"\\"+JpgName;
 														BB = BFolderDirctory+"\\"+years+"_"+month
 																+"_"+day+"_"+JpgName;
+														stringsinglesimple.setAA(AA);
+														stringsinglesimple.setBB(BB);
 														AtoB.FileMoveAtoB(AA,BB);
 														filemonitor.FileMoniterFront(AA, BB);
 													}
