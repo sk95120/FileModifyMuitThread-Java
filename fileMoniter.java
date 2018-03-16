@@ -1,7 +1,6 @@
 package copy;
 
 import java.util.Map;
-import java.util.Observer;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class fileMoniter extends Thread {
@@ -18,7 +17,6 @@ public class fileMoniter extends Thread {
 		this.aa = stringsinglesimple.getAA();
 		this.bb = stringsinglesimple.getBB();
 		System.out.println("the value of aa bb:"+aa+bb);
-		// TODO Auto-generated method stub
 		while(true) {	
 			if(aa != null && bb != null) {
 				if(!fileMap.containsKey(aa)) {

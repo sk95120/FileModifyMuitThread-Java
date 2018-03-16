@@ -1,8 +1,6 @@
 package copy;
 
 import java.io.File;
-import java.io.FilenameFilter;
-import java.io.IOException;
 
 class getJpgFromFolder {
 	String years=null,month=null,day=null,JpgName=null;
@@ -86,12 +84,4 @@ class getJpgFromFolder {
 					System.out.println("文件夹暂时无内容！");
 				}
 			}
-}
-
-class AskFileName implements FilenameFilter{
-	@Override
-	public boolean accept(File file, String type) {
-		// TODO Auto-generated method stub
-		return false;
-	}
 }
